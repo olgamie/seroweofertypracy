@@ -1,0 +1,56 @@
+---
+output: html_document
+---
+
+```{r, echo = F}
+data <- read.csv("SER_response.csv")
+colnames(data) <- c("timestamp", "company", "position", "location", 
+                    "team", "track", "email", "form", "money",
+                    "remote", "positionDescription", "mustHave", "niceHave",
+                    "technology", "language", "offer")
+```
+
+###  `r data$position` w `r data$company`
+
+## Szczegóły dotyczące stanowiska
+**Lokalizacja:** `r data$location`
+
+**Ścieżka:** `r data$track`
+
+**Forma zatrudnienia:** `r data$form`
+
+**Wynagrodzenie [PLN]:** `r data$money`
+
+**Możliwość pracy zdalnej:** `r data$remote`
+
+**Opis zespołu:**
+
+`r data$team`
+
+## Szczegóły dotyczące oferty
+
+**Opis stanowiska:** 
+
+`r data$positionDescription`
+
+**Wymagania MUST have:**
+
+`r data$mustHave`
+
+**Wymagania NICE to have:** 
+
+`r data$niceHave`
+
+**Technologia i narzędzia w zespole:**
+
+`r data$technology`
+
+**Języki:** `r data$language`
+
+## Benefity
+
+`r data$offer`
+
+## Aplikuj
+`r data$email`
+
