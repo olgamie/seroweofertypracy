@@ -1,8 +1,19 @@
 ---
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    theme: readable
 ---
 
-```{r, echo = F}
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(comment="", message=FALSE, warning = FALSE, 
+               tidy.opts=list(keep.blank.line=TRUE, width.cutoff=150),
+							 options(width=150))
+```
+
+```{r}
 data <- read.csv("SER_response.csv")
 colnames(data) <- c("timestamp", "company", "position", "location", 
                     "team", "track", "email", "form", "money",
