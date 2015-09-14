@@ -10,9 +10,10 @@ colnames(data) <- c("timestamp", "company", "position", "location",
                     "technology", "language", "offer")
 ```
 
-###  `r data$position` w `r data$company`
+# `r data$position` w `r data$company`
 
 ## Szczegóły dotyczące stanowiska
+
 **Lokalizacja:** `r data$location`
 
 **Ścieżka:** `r data$track`
@@ -26,6 +27,8 @@ colnames(data) <- c("timestamp", "company", "position", "location",
 **Opis zespołu:**
 
 `r data$team`
+
+****
 
 ## Szczegóły dotyczące oferty
 
@@ -47,10 +50,15 @@ colnames(data) <- c("timestamp", "company", "position", "location",
 
 **Języki:** `r data$language`
 
+****
+
 ## Benefity
 
 `r data$offer`
 
+****
+
 ## Aplikuj
+
 `r data$email`
 
