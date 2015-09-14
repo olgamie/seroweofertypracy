@@ -1,56 +1,56 @@
 ---
-output: html_document
+  output: html_document
 ---
-
-```{r, echo = F}
-data <- read.csv("SER_response.csv")
-colnames(data) <- c("timestamp", "company", "position", "location", 
+  
+  ```{r, echo = F}
+dataSER <- read.csv("SER_response.csv")
+colnames(dataSER) <- c("timestamp", "company", "position", "location", 
                     "team", "track", "email", "form", "money",
                     "remote", "positionDescription", "mustHave", "niceHave",
                     "technology", "language", "offer")
 ```
 
-###  `r data$position` w `r data$company`
+###  `r dataSER$position` w `r dataSER$company`
 
 ## Szczegóły dotyczące stanowiska
-**Lokalizacja:** `r data$location`
+**Lokalizacja:** `r dataSER$location`
 
-**Ścieżka:** `r data$track`
+**Ścieżka:** `r dataSER$track`
 
-**Forma zatrudnienia:** `r data$form`
+**Forma zatrudnienia:** `r dataSER$form`
 
-**Wynagrodzenie [PLN]:** `r data$money`
+**Wynagrodzenie [PLN]:** `r dataSER$money`
 
-**Możliwość pracy zdalnej:** `r data$remote`
+**Możliwość pracy zdalnej:** `r dataSER$remote`
 
 **Opis zespołu:**
-
-`r data$team`
+  
+  `r dataSER$team`
 
 ## Szczegóły dotyczące oferty
 
 **Opis stanowiska:** 
-
-`r data$positionDescription`
+  
+  `r dataSER$positionDescription`
 
 **Wymagania MUST have:**
-
-`r data$mustHave`
+  
+  `r dataSER$mustHave`
 
 **Wymagania NICE to have:** 
-
-`r data$niceHave`
+  
+  `r dataSER$niceHave`
 
 **Technologia i narzędzia w zespole:**
+  
+  `r dataSER$technology`
 
-`r data$technology`
-
-**Języki:** `r data$language`
+**Języki:** `r dataSER$language`
 
 ## Benefity
 
-`r data$offer`
+`r dataSER$offer`
 
 ## Aplikuj
-`r data$email`
+`r dataSER$email`
 
