@@ -1,75 +1,74 @@
 ---
-output:
-  html_document:
-    toc: true
-    toc_depth: 3
-    theme: readable
+	output:
+	html_document:
+	toc: true
+toc_depth: 3
+theme: readable
 ---
-
-```{r, echo=FALSE}
+	
+	```{r, echo=FALSE}
 library(knitr)
 opts_chunk$set(comment="", message=FALSE, warning = FALSE, 
-               tidy.opts=list(keep.blank.line=TRUE, width.cutoff=150),
+							 tidy.opts=list(keep.blank.line=TRUE, width.cutoff=150),
 							 options(width=150))
 ```
 
 ```{r}
-data <- read.csv("SER_response.csv")
-colnames(data) <- c("timestamp", "company", "position", "location", 
-                    "team", "track", "email", "form", "money",
-                    "remote", "positionDescription", "mustHave", "niceHave",
-                    "technology", "language", "offer")
+dataSER <- read.csv("SER_response.csv")
+colnames(dataSER) <- c("timestamp", "company", "position", "location", 
+										"team", "track", "email", "form", "money",
+										"remote", "positionDescription", "mustHave", "niceHave",
+										"technology", "language", "offer")
 ```
 
-# `r data$position` w `r data$company`
+# `r dataSER$position` w `r dataSER$company`
 
 ## Szczegóły dotyczące stanowiska
 
-**Lokalizacja:** `r data$location`
+**Lokalizacja:** `r dataSER$location`
 
-**Ścieżka:** `r data$track`
+**Ścieżka:** `r dataSER$track`
 
-**Forma zatrudnienia:** `r data$form`
+**Forma zatrudnienia:** `r dataSER$form`
 
-**Wynagrodzenie [PLN]:** `r data$money`
+**Wynagrodzenie [PLN]:** `r dataSER$money`
 
-**Możliwość pracy zdalnej:** `r data$remote`
+**Możliwość pracy zdalnej:** `r dataSER$remote`
 
 **Opis zespołu:**
-
-`r data$team`
+	
+	`r dataSER$team`
 
 ****
-
-## Szczegóły dotyczące oferty
-
-**Opis stanowiska:** 
-
-`r data$positionDescription`
+	
+	## Szczegóły dotyczące oferty
+	
+	**Opis stanowiska:** 
+	
+	`r dataSER$positionDescription`
 
 **Wymagania MUST have:**
-
-`r data$mustHave`
+	
+	`r dataSER$mustHave`
 
 **Wymagania NICE to have:** 
-
-`r data$niceHave`
+	
+	`r dataSER$niceHave`
 
 **Technologia i narzędzia w zespole:**
+	
+	`r dataSER$technology`
 
-`r data$technology`
-
-**Języki:** `r data$language`
-
-****
-
-## Benefity
-
-`r data$offer`
+**Języki:** `r dataSER$language`
 
 ****
+	
+	## Benefity
+	
+	`r dataSER$offer`
 
-## Aplikuj
-
-`r data$email`
-
+****
+	
+	## Aplikuj
+	
+	`r dataSER$email`
